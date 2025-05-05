@@ -1,0 +1,11 @@
+{
+  "name": "user-status-checker",
+  "version": "1.0.0",
+  "main": "checkStatus.js",
+  "scripts": {
+    "start": "node checkStatus.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}
