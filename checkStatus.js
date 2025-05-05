@@ -1,4 +1,8 @@
 const axios = require('axios');
+const express = require('express');
+
+const app = express();
+const port = process.env.PORT || 3000; // Define a port
 
 const BASE_URL = 'https://teens-f3fc7-default-rtdb.firebaseio.com'; // Replace with your Firebase DB URL
 const USERS_URL = `${BASE_URL}/users.json`;
@@ -30,4 +34,14 @@ async function checkUsers() {
   }
 }
 
-checkUsers();
+// Run the checkUsers function every 10 seconds (you can adjust this time)
+setInterval(checkUsers, 10000);
+
+// Start the Express server
+app.get('/', (req, res) => {
+  res.send('User status checker is running!');
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
