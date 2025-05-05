@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const BASE_URL = 'https://your-project-id.firebaseio.com'; // Replace with your Firebase DB URL
+const BASE_URL = 'https://teens-f3fc7-default-rtdb.firebaseio.com'; // Replace with your Firebase DB URL
 const USERS_URL = `${BASE_URL}/users.json`;
 
 async function checkUsers() {
